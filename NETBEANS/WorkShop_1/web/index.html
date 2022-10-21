@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function change() {
+                document.getElementById('f').submit();
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">WORKSHOP1</h1>
+        <h3>EX-1</h3>
+        <div style="text-align: left;">
+            <h2 style="color: blue">THỰC HIỆN PHÉP TOÁN</h2>
+            <form id="f1" action="ex1">
+                Nhập a:<input type="text" name="a"><br><br>
+                Nhập b:<input type="text" name="b"><br><br>
+                <div style="margin-left: 30px">
+                    <input type="submit" name="a+b" value="a+b">
+                    <input type="submit" name="a-b" value="a-b">
+                    <input type="submit" name="a*b" value="a*b">
+                    <input type="submit" name="a/b" value="a/b">
+                </div>
+            </form>
+            <br>
+            <span>KẾT QUẢ</span><input type="text" name="ketqua">
+        </div>
+        <h3>EX-2</h3>
+        <div style="text-align: left;">
+            <h2 style="color: blue">TÌM MAX VÀ TÌM MIN</h2>
+            <form action="ex2">
+                Nhập a: <input type="text" name="a"><br><br>
+                Nhập b: <input type="text" name="b"><br><br>
+                Nhập c: <input type="text" name="c"><br><br>
+                Kết quả:<input type="text" name="Ketqua"><br><br>
+                <input type="radio" name="compare" value="greater">Tìm số lớn nhất
+                <input type="radio" name="compare" value="less">Tìm số nhỏ nhất
+                <br><br>
+                <input type="submit" name="find" value="Tìm">
+                <input type="submit" name="dele" value="Xóa">
+            </form>
+        </div>
+        <h3>EX-3</h3>
+        <div style="text-align: left;">
+            <h2 style="color: blue">THỰC HIỆN PHÉP TOÁN</h2>
+            <form action="ex3" id="f">
+                Nhập n: <input type="text" name="n"> (1 < n <100)<br><br>
+                Chọn phép toán 
+                <select name="op" onchange="change()">
+                    <option></option>
+                    <option>Tổng n số liên tiếp</option>
+                    <option>Tính n!</option>
+                    <option>In dãy lẻ</option>
+                    <option>In dãy số chẵn</option>
+                    <option>Kiểm tra số nguyên tố</option>
+                </select><br><br>
+                Kết quả <input type="text" name="ketqua">
+            </form>
+        </div>
+        <h3>EX-4</h3>
+        <div style="text-align: left;">
+            <h2 style="color: blue">THỰC HIỆN PHÉP TOÁN</h2>
+            <form action="ex4" id="f4">
+                Kết quả: <input type="text" name="ketqua" style="width: 150px; height: 50px;"><br><br>
+                <span style="font-style: italic; margin-right: 10px">Chọn</span>Nhập mảng<input type="text" name="input"><input type="radio" name="ouput" value="ouput">In mảng<br><br>
+                <div><input type="radio" name="ouput" value="le">Tổng lẻ <input type="radio" name="ouput" value="chan">Tích chẵn <input type="radio" name="ouput" value="sort">Sắp xếp</div>
+                <div style="margin-left: 100px"><input type="submit" name="thuchien" value="Thực hiện"> <input type="submit" name="thoat" value="Thoát"> </div>
+            </form>
+        </div>
+        <h3>EX-5</h3>
+        <div style="text-align: left; border: 1px solid blue;width: 50%">
+            <h2 style="text-align: center">ĐỐI TƯỢNG STRING</h2>
+            <form action="ex5">
+                <div style="border-bottom: 1px solid black; border-top: 1px solid black;">
+                    <p>Nhập đoạn văn:</p><input type="text" name="input" style="width: 250px; height: 100px"><br><br>
+                    Tổng số ký tự: <input type="text"> <input type="submit" name="tong" value="submit"><br><br>
+                </div>
+                <div style="border-bottom: 1px solid black;">
+                    Nhập vị trí<input type="text" name="input2" style="width: 50px">Ký tự tương ứng <input type="text" style="width: 50px"><input type="submit" name="ktri" value="submit"><br><br>
+                </div>
+                <div style="border-bottom: 1px solid black;">
+                    Nhập chuỗi <input type="text" name="input3" style="width: 50px">Vị trí tương ứng <input type="text" style="width: 50px"><input type="submit" name="vtri" value="submit"><br><br>
+                </div>
+                <div>
+                    Nhập vị trí cần tách Từ:<input type="text" name="input4" style="width: 50px"> Đến <input type="text" name="input5" style="width: 50px">Kết quả<input type="text" style="width: 50px"><input type="submit" name="ketqua" value="submit"><br><br>
+                </div>
+            </form>
+        </div>
+        <h3>EX-6</h3>
+        <div style="text-align: left;">
+            <h2 style="color: blue;">GIẢI PHƯƠNG TRINH<br>BẬC NHẤT</h2>
+            <form action="ex6">
+                Nhập a: <input type="text" name="a"><br><br>
+                Nhập b: <input type="text" name="b"><br><br>
+                <input type="submit" name="giai" value="Giải PT">
+                <input type="submit" name="out" value="Thoát">
+            </form>
+            Kết luận nghiệm<br><input type="text" name="ketqua">
+        </div>
+    </body>
+</html>

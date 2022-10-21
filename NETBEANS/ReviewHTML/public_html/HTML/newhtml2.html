@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            let a = document.getElementsByTagName("input")[0].value;
+            let b = document.getElementsByTagName("input")[1].value;
+            
+            function tinhtong(){
+                alert(a);
+//                document.getElementsByName("Ketqua") .value = parseInt(a)+parseInt(b);
+            }
+            
+            function tinghieu(){
+                document.getElementsByName("Ketqua") .value = parseInt(a)-parseInt(b);
+            }
+            
+            function tinhnhan(){
+                alert("hello");
+//                document.getElementsByName("Ketqua") .value = parseInt(a)*parseInt(b);
+            }
+            
+            function tinhchia(){
+                document.getElementsByName("Ketqua") .value = parseInt(a)/parseInt(b);
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="color: blue; text-align: center;">THỰC HIỆN PHÉP TOÁN</h1>
+        Nhập a: <input type="text" name="Nhapa"><br>
+        Nhập b: <input type="text" name="Nhapb">
+        <br>
+        <div style="margin:10px">
+            <button onclick="tinhtong();">a+b</button>
+            <button onclick="tinghieu();">a-b</button>
+            <button onclick="tinhnhan();">a*b</button>
+            <button onclick="tinhchia();">a/b</button>
+        </div>
+        <h1>KẾT QUẢ <input type="text" name="Ketqua"></h1>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tinhtong() {
+            var a = document.getElementById('Nhapa').value;
+            var b = document.getElementById('Nhapb').value;
+            console.log(parseInt(a) + parseInt(b));
+            var c = parseInt(a) + parseInt(b)
+            document.getElementsById('Ketqua').innerHTML = "hai noi";
+        }
+
+        function tinghieu() {
+            var a = document.getElementById('Nhapa').value;
+            var b = document.getElementById('Nhapb').value;
+            console.log(parseInt(a) - parseInt(b));
+            var c = parseInt(a) - parseInt(b);
+            document.getElementsById('Ketqua').innerHTML = c;
+        }
+
+        function tinhnhan() {
+            var a = document.getElementById('Nhapa').value;
+            var b = document.getElementById('Nhapb').value;
+            console.log(parseInt(a) * parseInt(b));
+            var c =parseInt(a) * parseInt(b);
+            document.getElementsById('Ketqua').innerHTML = c;
+        }
+
+        function tinhchia() {
+            var a = document.getElementById('Nhapa').value;
+            var b = document.getElementById('Nhapb').value;
+            console.log(parseInt(a) / parseInt(b));
+            var c = parseInt(a) / parseInt(b)
+            document.getElementsById('Ketqua').innerHTML = c;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="color: blue; text-align: center;">THỰC HIỆN PHÉP TOÁN</h1>
+    <form name="f1">
+        Nhập a: <input type="text" id="Nhapa"><br>
+        Nhập b: <input type="text" id="Nhapb">
+        <br>
+        <div style="margin:10px">
+            <input type="button" value="a+b" onclick="tinhtong()">
+            <input type="button" value="a-b" onclick="tinghieu()">
+            <input type="button" value="a*b" onclick="tinhnhan()">
+            <input type="button" value="a/b" onclick="tinhchia()">
+        </div>
+    </form>
+    <label>Kết quả</label><label style="padding:3px 50px; border-width: 1px; border-color: black; border-style: solid;" id="Ketqua"></label>
+</body>
+
+</html>
