@@ -170,86 +170,45 @@ body{
     display: block;
 }
 
-.studentBoard__header{
-    margin-left: 200px;
-}
-
-.studentBoard__Body{
-    display: flex;
-}
-
-.studentBoard__Body__left{
-    width: 59%;
-    margin-left: 200px;
-}
-
-.studentBoard__Body__left table {
-    border:1px solid rgb(101, 120, 140);
-    border-radius: 10px;
-    width: 90%;
-    height: 300px;
-}
-
-.studentBoard__Body__left th{
-    border-bottom: 1px solid rgb(101, 120, 140);
-    height: 50px;
-}
-
-.studentBoard__Body__left td{
-    padding: 0 30px;
-    color: #0489cb;
-    cursor: pointer;
-}
-
-.studentBoard__Body__left td a{
-    text-decoration: none;
-}
-
-.studentBoard__Body__left tr:first-child {
-    background-color: #e2d3f4;
-    border: 10px;
-}
-
-.studentBoard__Body__left tr:first-child :hover{
-    background-color: #e2d3f4;
-    border-radius: 0;
-    color: black;
-}
-
-.studentBoard__Body__left tr :hover{
-    background-color: #b4b4b449;
-    border-radius: 10px;
-    color: #005580;
-}
-
-.studentBoard__Body__right{
-    width: 39%;
-    margin:0 30px;
-}
-
-.studentBoard__Body__right table{
-    width: 60%;
-    border:1px solid rgb(101, 120, 140);
-    border-radius: 10px;
-    height: 300px;
-}
-
-.studentBoard__Body__right th{
-    border-bottom: 1px solid rgb(101, 120, 140);
-    height: 50px;
-}
-
-.studentBoard__Body__right tr:first-child {
-    background-color: #e2d3f4;
-    border: 10px;
-}
-
-.studentBoard__Body__right tr:nth-child(2){
+.resident_history{
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    align-items: center;
 }
 
-.studentBoard__Body__right td{
+.resident_history table{
     text-align: center;
+    margin: 0 50px;
+    border-spacing: 0;
+}
+
+.resident_history th{ 
+    border-bottom: 1px solid rgba(116, 116, 116, 0.655);
+    width: 300px;
+    background-color: hsla(200, 100%, 67%, 0.629);
+    text-transform: uppercase;
+}
+
+.resident_history th:first-child{
+    background-color: hsla(200, 100%, 67%, 0.629);
+    border-top-left-radius: 10px;
+}
+
+.resident_history th:last-child{
+    background-color: hsla(200, 100%, 67%, 0.629);
+    border-top-right-radius: 10px;
+}
+
+.resident_history th , td {
+    height: 40px;
+    border-left: 1px solid rgba(116, 116, 116, 0.655);
+}
+
+.resident_history th:first-child ,
+ td:first-child{
+    border-left:none ;
+}
+
+.resident_history table tr:nth-child(odd){
+    background-color: antiquewhite;
 }
