@@ -37,7 +37,10 @@
                     <td>${item.getName()}</td>
                     <td>${item.getPrice()}</td>
                     <td>${item.getUnitsInStock()}</td>
-                    <td>${item.getImage()}</td>
+                    <td><img src="images/${item.getImage()}" alt="alt" style="width: 80px; height: 80px" /></td>
+                    <td><a href="Edit?mod=0&id=${item.getCode()}">Update</a></td>
+                    <td><a href="Edit?mod=1&id=${item.getCode()}">Delete</a></td>
+                    
                 </tr>
             </c:forEach>
     </body>

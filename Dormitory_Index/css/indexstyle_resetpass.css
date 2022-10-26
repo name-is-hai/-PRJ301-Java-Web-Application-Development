@@ -68,3 +68,13 @@ body {
     box-shadow: inset -23px -23px 100px #d5d5bf,
         inset 23px 23px 100px #fffff9;
 }
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

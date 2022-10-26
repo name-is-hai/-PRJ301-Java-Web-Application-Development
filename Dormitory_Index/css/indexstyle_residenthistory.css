@@ -212,3 +212,13 @@ body{
 .resident_history table tr:nth-child(odd){
     background-color: antiquewhite;
 }
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -17,6 +17,7 @@ import java.util.ArrayList;
  * @author haiqd
  */
 public class Product {
+
     String code, name, price, unitsInStock, image;
 
     public Product() {
@@ -71,7 +72,7 @@ public class Product {
     public void setImage(String image) {
         this.image = image;
     }
-    
+
     Connection cnn;//ket noi DB
     Statement stm;//thu hien cau lenh sql
     ResultSet rs; //luu tru va su ly du lieu
@@ -86,14 +87,14 @@ public class Product {
             System.out.println("Connect error" + e.getMessage());
         }
     }
-    
-    public ArrayList<Product> getListProducṭ(){
+
+    public ArrayList<Product> getListProducṭ() {
         ArrayList<Product> listProduct = new ArrayList<>();
-        try{
+        try {
             String strSelect = "select * from Products";
             pstm = cnn.prepareStatement(strSelect);
             rs = pstm.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 String id = rs.getString(1);
                 String name = rs.getString(2);
                 String price = rs.getString(3);
@@ -102,10 +103,30 @@ public class Product {
                 Product p = new Product(id, name, price, stock, image);
                 listProduct.add(p);
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("get list Product error: " + e.getMessage());
         }
         return listProduct;
     }
-    
+
+    public Product getProductById(String code) {
+        try {
+            String strSelect = "select * from Products where ProductID = ?";
+            pstm = cnn.prepareStatement(strSelect);
+            pstm.setString(1, code);
+            rs = pstm.executeQuery();
+            while (rs.next()) {
+                String name = rs.getString(2);
+                String price = rs.getString(3);
+                String stock = rs.getString(4);
+                String image = rs.getString(5);
+                Product p = new Product(code, name, price, stock, image);
+                return p;
+            }
+        } catch (Exception e) {
+            System.out.println("get list Product error: " + e.getMessage());
+        }
+        return null;
+    }
+
 }

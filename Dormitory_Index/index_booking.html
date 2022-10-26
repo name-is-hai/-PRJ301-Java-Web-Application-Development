@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +20,7 @@
         });
     });
 </script>
+
 <body>
     <div class="navbar">
         <div class="navbar__left">
@@ -37,26 +39,42 @@
                     <div class="dd_list">
                         <ul>
                             <li>
-                                <div class="icon"><ion-icon name="home"></ion-icon></div>
-                                <div class="text"><p>
-                                    <a href="">Home</a>
-                                </p></div>
+                                <div class="icon">
+                                    <ion-icon name="home"></ion-icon>
+                                </div>
+                                <div class="text">
+                                    <p>
+                                        <a href="index_studentboard.html">Home</a>
+                                    </p>
+                                </div>
                             </li>
                             <li>
-                                <div class="icon"><ion-icon name="person-circle"></ion-icon></div>
-                                <div class="text"><p>
-                                    <a href="">Profile</a>
-                                </p></div>
+                                <div class="icon">
+                                    <ion-icon name="person-circle"></ion-icon>
+                                </div>
+                                <div class="text">
+                                    <p>
+                                        <a href="">Profile</a>
+                                    </p>
+                                </div>
                             </li>
                             <li>
-                                <div class="icon"><ion-icon name="call"></ion-icon></div>
-                                <div class="text"><p>
-                                    <a href="">Contact</a>
-                                </p></div>
+                                <div class="icon">
+                                    <ion-icon name="call"></ion-icon>
+                                </div>
+                                <div class="text">
+                                    <p>
+                                        <a href="">Contact</a>
+                                    </p>
+                                </div>
                             </li>
                             <li>
-                                <div class="icon"><ion-icon name="log-out"></ion-icon></div>
-                                <div class="text"><p><a href="">Log Out</a></p></div>
+                                <div class="icon">
+                                    <ion-icon name="log-out"></ion-icon>
+                                </div>
+                                <div class="text">
+                                    <p><a href="">Log Out</a></p>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -65,5 +83,120 @@
         </div>
     </div>
     <hr style="margin: 0 10px;">
+    <div class="booking">
+        <div class="booking_header" style="text-align: center;">
+            <h1>Reservations</h1>
+        </div>
+        <div class="booking_body">
+            <div class="booking_body_top">
+                <div class="card">
+                    <div class="card-img"><img src="img/1 people.jpg" alt=""></div>
+                    <div class="card-info">
+                        <form action="">
+                            <p class="text-title">1 Bed</p>
+                            <p class="text-body">Lorem Ipsum dolor sit amet</p>
+                            <button class="card-button" type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img"><img src="img/2 people.jpg" alt=""></div>
+                    <div class="card-info">
+                        <form action="">
+                            <p class="text-title">2 Bed</p>
+                            <p class="text-body">Lorem Ipsum dolor sit amet</p>
+                            <button class="card-button" type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img"><img src="img/3 people.jpg" alt=""></div>
+                    <div class="card-info">
+                        <form action="">
+                            <p class="text-title">3 Bed</p>
+                            <p class="text-body">Lorem Ipsum dolor sit amet</p>
+                            <button class="card-button" type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="booking_body_bottom">
+                <div class="card">
+                    <div class="card-img"><img src="img/4 people.jpg" alt=""></div>
+                    <div class="card-info">
+                        <form action="">
+                            <p class="text-title">4 Bed</p>
+                            <p class="text-body">Lorem Ipsum dolor sit amet</p>
+                            <button class="card-button" type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="img/5 people.jpg" alt=""></div>
+                    <div class="card-info">
+                        <form action="">
+                            <p class="text-title">5 Bed</p>
+                            <p class="text-body">Lorem Ipsum dolor sit amet</p>
+                            <button class="card-button" type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="img/6 people.jpg" alt=""></div>
+                    <div class="card-info">
+                        <form action="">
+                            <p class="text-title">6 Bed</p>
+                            <p class="text-body">Lorem Ipsum dolor sit amet</p>
+                            <button class="card-button" type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        © Copyright 2022 - FPT Education | Developed by
+        <a target="_blank" href="https://linktr.ee/__nameishai"> Vũ Đào Ngọc Hải</a>
+    </div>
 </body>
+<script src="js/app_booking.js"></script>
+
 </html>
+
+<!-- <p>Select Your Type Of Room:</p>
+                <div class="select-box">
+                    <div class="option-container">
+                        <div class="option"
+                            onclick="document.getElementById('changepic').src='img/2 people.jpg';document.getElementById('price').innerHTML = '1 trieu dong'">
+                            <input type="radio" class="radio" name="roomtype" id="2people">
+                            <label for="2people">2 beds</label>
+                        </div>
+                        <div class="option"
+                            onclick="document.getElementById('changepic').src='img/3 people.jpg';document.getElementById('price').innerHTML = '9 tram nghin dong'">
+                            <input type="radio" class="radio" name="roomtype" id="3people">
+                            <label for="3people">3 beds</label>
+                        </div>
+                        <div class="option"
+                            onclick="document.getElementById('changepic').src='img/4 people.jpg';document.getElementById('price').innerHTML = '8 tram nghin dong'">
+                            <input type="radio" class="radio" name="roomtype" id="4people">
+                            <label for="4people">4 beds</label>
+                        </div>
+                        <div class="option"
+                            onclick="document.getElementById('changepic').src='img/5 people.jpg';document.getElementById('price').innerHTML = '7 tram nghin dong'">
+                            <input type="radio" class="radio" name="roomtype" id="5people">
+                            <label for="5people">5 beds</label>
+                        </div>
+                        <div class="option"
+                            onclick="document.getElementById('changepic').src='img/6 people.jpg';document.getElementById('price').innerHTML = '6 tram nghin dong'">
+                            <input type="radio" class="radio" name="roomtype" id="6people">
+                            <label for="6people">6 beds</label>
+                        </div>
+                    </div>
+                    <div class="selected">
+                        Select type of room
+                    </div>
+                    <p id="price" style="text-align: center;"></p> -->
+<!-- <img src="" alt="" id="changepic" style="width: 100%;"> -->

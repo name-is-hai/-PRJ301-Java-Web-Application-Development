@@ -9,6 +9,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
@@ -28,6 +29,10 @@ public class UserController extends HttpServlet{
         //Xử lý
         User u = new User(account, pass);
         if(u.checkLogin()){
+            //luu thong tin vafo session
+            HttpSession session = req.getSession();
+            session.setAttribute("account", account);
+            
             //lay du lieu o bawngf user
             ArrayList<User> list = u.getListUser();
             req.setAttribute("list", list);
