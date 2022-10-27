@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/-PRJ301-Java-Web-Application-Development/NETBEANS/Demo_PRJ301_SE1637/src/java/Controller/UserController.java</file>
-            <file>file:/E:/-PRJ301-Java-Web-Application-Development/NETBEANS/Demo_PRJ301_SE1637/src/java/Controller/ProductController.java</file>
-            <file>file:/E:/-PRJ301-Java-Web-Application-Development/NETBEANS/Demo_PRJ301_SE1637/web/ShowMessage.jsp</file>
             <file>file:/E:/-PRJ301-Java-Web-Application-Development/NETBEANS/Demo_PRJ301_SE1637/web/EditProduct.jsp</file>
-            <file>file:/E:/-PRJ301-Java-Web-Application-Development/NETBEANS/Demo_PRJ301_SE1637/web/ListProduct.jsp</file>
+            <file>file:/E:/-PRJ301-Java-Web-Application-Development/NETBEANS/Demo_PRJ301_SE1637/web/WEB-INF/web.xml</file>
             <file>file:/E:/-PRJ301-Java-Web-Application-Development/NETBEANS/Demo_PRJ301_SE1637/src/java/Controller/EditController.java</file>
+            <file>file:/E:/-PRJ301-Java-Web-Application-Development/NETBEANS/Demo_PRJ301_SE1637/src/java/Controller/AddProduct.java</file>
+            <file>file:/E:/-PRJ301-Java-Web-Application-Development/NETBEANS/Demo_PRJ301_SE1637/web/AddProduct.jsp</file>
             <file>file:/E:/-PRJ301-Java-Web-Application-Development/NETBEANS/Demo_PRJ301_SE1637/src/java/Model/User.java</file>
             <file>file:/E:/-PRJ301-Java-Web-Application-Development/NETBEANS/Demo_PRJ301_SE1637/src/java/Model/Product.java</file>
         </group>

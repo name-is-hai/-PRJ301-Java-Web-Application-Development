@@ -12,12 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form>
-            Code:<input type="text" name="code"><br>
-            Name:<input type="text" name="name"><br>
-            Price:<input type="text" name="price">
-            <input type="submit" name="update" value="Update">
-            <input type="submit" name="delete" value="Del">
+        <form action="Edit" method="post">
+            Code:<input type="text" name="code" value="${code}" readonly=""><br>
+            Name:<input type="text" name="name" value="${name}"><br>
+            Price:<input type="text" name="price" value="${price}">
+            <input type="submit" name="submitbutton" value="Update">
+            <input type="submit" name="submitbutton" value="Delete">
         </form>
     </body>
 </html>

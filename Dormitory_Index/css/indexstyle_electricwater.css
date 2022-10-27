@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(232, 232, 232);
+    animation: fade 1.5s ease;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+.navbar .navbar__right {
+    display: flex;
+    align-items: right;
+}
+
+.navbar .navbar__left img {
+    width: 200px;
+}
+
+.wrapper {
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.dd_wrap {
+    position: relative;
+    width: 325px;
+    z-index: 3;
+}
+
+.hamburger_wrap {
+    width: 45px;
+    height: 45px;
+    background-color: #0daeff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.hamburger_wrap>div {
+    width: 25px;
+    height: 3px;
+    background: whitesmoke;
+    border-radius: 25px;
+    margin-bottom: 5px;
+    transition: all 0.5s ease;
+}
+
+.hamburger_wrap>div:last-child {
+    margin-bottom: 0;
+}
+
+.dd_list {
+    position: absolute;
+    top: -8px;
+    left: 70px;
+    display: none;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.dd_list ul {
+    background-color: rgb(7, 136, 201);
+    width: 60px;
+    border-radius: 5px;
+    padding-inline-start: 0;
+}
+
+.dd_list ul li {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dd_list ul li .icon {
+    color: #fff;
+    font-size: 22px;
+    z-index: 999;
+}
+
+.dd_list ul li .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(127, 168, 255);
+    height: 100%;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 55px;
+}
+
+.dd_list ul li .text p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.dd_list ul li .text p a:hover {
+    color: cadetblue;
+}
+
+.dd_list::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    border: 10px solid;
+    border-color: transparent rgb(7, 136, 201) transparent transparent;
+}
+
+.dd_wrap .dd_list ul li .text {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    padding-left: 0;
+    width: 0;
+}
+
+.dd_wrap .dd_list ul li .text p {
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.dd_wrap .dd_list ul li:first-child .text {
+    border-top-left-radius: 5px;
+}
+
+.dd_wrap .dd_list ul li:last-child .text {
+    border-bottom-left-radius: 5px;
+}
+
+.dd_wrap .dd_list ul li:hover .text {
+    padding-left: 55px;
+    width: 100px;
+}
+
+.dd_wrap .dd_list ul li:hover .text p {
+    visibility: visible;
+}
+
+.dd_wrap.active .hamburger_wrap,
+.hamburger_wrap:hover {
+    background-color: rgb(7, 136, 201);
+}
+
+.dd_wrap.active .hamburger_wrap div:nth-child(2) {
+    margin-left: 8px;
+}
+
+.dd_wrap.active .dd_list {
+    display: block;
+}

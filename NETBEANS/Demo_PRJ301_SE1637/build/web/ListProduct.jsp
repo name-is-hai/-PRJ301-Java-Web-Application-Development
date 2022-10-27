@@ -21,7 +21,7 @@
                 listProduct = (ArrayList<Product>)request.getAttribute("listProduct");
             }
         %>
-        
+        <h1><a href="AddProduct.jsp">Add Product</a></h1>
         List Product:
             <table border = "1">
             <tr>

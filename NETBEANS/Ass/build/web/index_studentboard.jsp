@@ -15,17 +15,16 @@
     <title>Student Board-FPT On Campus Dormitory</title>
     <link rel="shortcut icon" type="x-icon" href="img/icon.png">
     <link rel="stylesheet" href="css/indexstyle_studentbroad.css">
-    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 <script>
     $(document).ready(function () {
-        $(".wrapper .btn").click(function () {
-            $(this).toggleClass("active");
-            $(".menu").toggleClass("active");
+        $(".hamburger_wrap").click(function () {
+            $(this).parent().toggleClass("active");
+            $(".dd_list").toggleClass("active");
         });
     });
 </script>
-
 <body>
     <div class="navbar">
         <div class="navbar__left">
@@ -33,40 +32,38 @@
                     alt="logo__FPT__University"></a>
         </div>
         <div class="navbar__right">
-            <p>Xin chào haivdnhe160490</p>
+            <p>Xin chào ${Name}</p>
             <div class="wrapper">
-                <div class="contaniner">
-                    <div class="btn">
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
+                <div class="dd_wrap">
+                    <div class="hamburger_wrap">
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
-                    <div class="menu">
+                    <div class="dd_list">
                         <ul>
-                            <div class="link">
-                                <ion-icon name="home-outline"></ion-icon>
-                                <li> Home </li>
-                            </div>
-                            <div class="link">
-                                <ion-icon name="person-circle-outline"></ion-icon>
-                                <li> Profile </li>
-                            </div>
-                            <div class="link">
-                                <ion-icon name="reader-outline"></ion-icon>
-                                <li> About </li>
-                            </div>
-                            <div class="link">
-                                <ion-icon name="call-outline"></ion-icon>
-                                <li> Contact </li>
-                            </div>
-                            <div class="link">
-                                <ion-icon name="wallet-outline"></ion-icon>
-                                <li> Wallet </li>
-                            </div>
-                            <div class="link">
-                                <ion-icon name="log-out-outline"></ion-icon>
-                                <li> Log Out </li>
-                            </div>
+                            <li>
+                                <div class="icon"><ion-icon name="home"></ion-icon></div>
+                                <div class="text"><p>
+                                    <a href="">Home</a>
+                                </p></div>
+                            </li>
+                            <li>
+                                <div class="icon"><ion-icon name="person-circle"></ion-icon></div>
+                                <div class="text"><p>
+                                    <a href="">Profile</a>
+                                </p></div>
+                            </li>
+                            <li>
+                                <div class="icon"><ion-icon name="call"></ion-icon></div>
+                                <div class="text"><p>
+                                    <a href="">Contact</a>
+                                </p></div>
+                            </li>
+                            <li>
+                                <div class="icon"><ion-icon name="log-out"></ion-icon></div>
+                                <div class="text"><p><a href="logout">Log Out</a></p></div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -86,19 +83,19 @@
                         <th>Actions</th>
                     </tr>
                     <tr>
-                        <td>Resident History</td>
+                        <td><a href="index_residenthistory.jsp">Resident History</a></td>
                     </tr>
                     <tr>
-                        <td>Book a bed</td>
+                        <td><a href="index_booking.jsp">Book a bed</a></td>
                     </tr>
                     <tr>
-                        <td>View Monthly Electric / Water Usage</td>
+                        <td><a href="index_electricwater.jsp">View Monthly Electric / Water Usage</a></td>
                     </tr>
                     <tr>
-                        <td>Cost</td>
+                        <td><a href="">Cost</a></td>
                     </tr>
                     <tr>
-                        <td>Request</td>
+                        <td><a href="">Request</a></td>
                     </tr>
 
                 </table>
@@ -109,6 +106,7 @@
                         <th>Notification</th>
                     </tr>
                     <tr>
+                        <td>Your FAP Balance:</td>
                         <td>Your gender information at FAP system: Nam(Male), if this information is not correct, please
                             contact Academic staff.</td>
                     </tr>

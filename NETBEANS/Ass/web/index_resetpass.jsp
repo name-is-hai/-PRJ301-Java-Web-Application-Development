@@ -23,7 +23,7 @@
         <div class="resetform">
             <h2>Forgot Password?</h2>
             <p>Enter your username and date of birth below to reset your password</p>
-            <form action="login" method="get">
+            <form action="reset" method="post">
                 <div class="inputfill">
                     <ion-icon name="person-circle-outline"></ion-icon>
                     <input type="text" name="username" placeholder="Username" required>

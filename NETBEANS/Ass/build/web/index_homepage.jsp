@@ -46,16 +46,16 @@
                 <div class="login__left">
                     <img src="img/ban-do-dai-hoc-fpt.jpg" alt="">
                 </div>
-                <div class="login__right">
-                    <h1 style="color: #fc873f; margin-top: 60px">Sign in</h1>
+                <div class="login__right" style="margin-bottom: 10%; margin-left: 200px;">
+                    <h1 style="color: #fc873f;">Sign in</h1>
                     <form action="login" method="post">
                         <div class="inputfill">
                             <ion-icon name="person-circle-outline"></ion-icon>
-                            <input type="text" name="username" placeholder="Username" required value="${username}">
+                            <input type="text" name="username" placeholder="Username" required>
                         </div>
                         <div class="inputfill">
                             <ion-icon name="key-outline"></ion-icon>
-                            <input type="password" name="password" placeholder="Password" required value="${password}">
+                            <input type="password" name="password" placeholder="Password" required>
 
                         </div>
                         <div class="forgotpass">
@@ -68,7 +68,7 @@
                                     class="login__buttum">Login</button></span>
                         </div>
                     </form>
-                            <div style="color: red; text-align: center;">${error}</div>        
+                <div style="text-align: center; color: red">${error}</div>
                 </div>
             </div>
         </div>
@@ -177,3 +177,6 @@
 
 <script src="js/app_homepage.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+</html>

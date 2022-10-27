@@ -228,4 +228,29 @@ public class User {
 
     }
 
+    public User getUserByAcc(String account) {
+        try {
+            String strSelect = "select * from Users where account = ?";
+            pstm = cnn.prepareStatement(strSelect);
+            pstm.setString(1, account);
+            rs = pstm.executeQuery();
+            while (rs.next()) {
+                String pass = rs.getString(2);
+                String name = rs.getString(3);
+                String gender = "Male";
+                if (rs.getBoolean(4) == false) {
+                    gender = "Female";
+                }
+                String addr = rs.getString(5);
+                SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+                String dob = f.format(rs.getDate(6));
+                User u = new User(account, pass, name, gender, addr, dob); 
+                return u;
+            }
+        } catch (Exception e) {
+            System.out.println("get list Product error: " + e.getMessage());
+        }
+        return null;
+    }
+
 }

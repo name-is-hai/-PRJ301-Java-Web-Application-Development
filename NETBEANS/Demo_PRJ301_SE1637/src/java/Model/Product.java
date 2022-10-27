@@ -129,4 +129,46 @@ public class Product {
         return null;
     }
 
+    public void updateByCode(String code, String name, String price) {
+        try {
+            String strUpdate = "UPDATE Products SET ProductName = ?, UnitPrice = ? WHERE ProductID = ?";
+            pstm = cnn.prepareStatement(strUpdate);
+            pstm.setString(1, name);
+            pstm.setString(2, price);
+            pstm.setString(3, code);
+            pstm.executeUpdate();
+        } catch (Exception e) {
+            System.out.println("Update product error: " + e.getMessage());
+        }
+    }
+
+    public void deleteByCode(String code) {
+        try {
+            String strDelete = "DELETE FROM Products WHERE ProductID = ?";
+            pstm = cnn.prepareStatement(strDelete);
+            pstm.setString(1, code);
+            pstm.execute();
+        } catch (Exception e) {
+            System.out.println("Delete product error: " + e.getMessage());
+        }
+    }
+
+    public void addNewProduct(String id, String name, String price, String stock, String img, String category, String discontinued) {
+        try {
+            String strAdd = "insert into Products(ProductID, ProductName, UnitPrice, UnitsInstock, [Image], CategoryID, Discontinued) "
+                    + "values (?, ?, ?, ?, ?, ?, ?)";
+            pstm = cnn.prepareStatement(strAdd);
+            pstm.setInt(1, Integer.parseInt(id));
+            pstm.setString(2, name);
+            pstm.setString(3, price);
+            pstm.setInt(4, Integer.parseInt(stock));
+            pstm.setString(5, img);
+            pstm.setString(6, category);
+            pstm.setB(7, discontinued);
+            pstm.executeUpdate();
+        } catch (Exception e) {
+            System.out.println("Add error" + e.getMessage());
+        }
+    }
+
 }
