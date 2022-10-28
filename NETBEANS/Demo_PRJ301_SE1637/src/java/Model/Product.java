@@ -155,16 +155,15 @@ public class Product {
 
     public void addNewProduct(String id, String name, String price, String stock, String img, String category, String discontinued) {
         try {
-            String strAdd = "insert into Products(ProductID, ProductName, UnitPrice, UnitsInstock, [Image], CategoryID, Discontinued) "
-                    + "values (?, ?, ?, ?, ?, ?, ?)";
+            String strAdd = "SET IDENTITY_INSERT [dbo].[Products] ON  INSERT [dbo].[Products] ([ProductID], [ProductName], [UnitPrice], [UnitsInStock],[Image], [CategoryID], [Discontinued]) VALUES (?, ?, ?, ?, ?, ?, ?)";
             pstm = cnn.prepareStatement(strAdd);
-            pstm.setInt(1, Integer.parseInt(id));
+            pstm.setString(1, id);
             pstm.setString(2, name);
             pstm.setString(3, price);
-            pstm.setInt(4, Integer.parseInt(stock));
+            pstm.setString(4, stock);
             pstm.setString(5, img);
             pstm.setString(6, category);
-            pstm.setB(7, discontinued);
+            pstm.setString(7, discontinued);
             pstm.executeUpdate();
         } catch (Exception e) {
             System.out.println("Add error" + e.getMessage());
