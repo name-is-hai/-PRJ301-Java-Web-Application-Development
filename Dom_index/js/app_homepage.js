@@ -1,7 +1,7 @@
 //intro
-let intro = document.querySelector('.intro');
-let logo = document.querySelector('.logo-header');
-let logoSpan = document.querySelectorAll('.logo');
+const intro = document.querySelector('.intro');
+const logo = document.querySelector('.logo-header');
+const logoSpan = document.querySelectorAll('.logo');
 
 window.addEventListener('DOMContentLoaded', ()=>{
     setTimeout(()=>{

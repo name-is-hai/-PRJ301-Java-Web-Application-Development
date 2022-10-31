@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgba(39, 39, 39);
+  background-color: rgb(20, 20, 20);
   margin: 0px;
   overflow: hidden;
 }
@@ -115,6 +115,12 @@ header .logo img {
   right: -200vh;
   top: 0;
   background-color: rgb(39, 39, 39);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 9%, 
+    transparent 9%
+  );
+  background-position: 0% 0%;
+  background-size: 10vmin 10vmin;
   transition: 0.2s;
 }
 
@@ -157,36 +163,54 @@ header .logo img {
 }
 
 #menu[data-active-index="1"]>#menu-background-pattern {
-  background-position: 0% -50%;
+  background-position: 0% -40%;
 }
 
 #menu[data-active-index="2"]>#menu-background-pattern {
-  background-position: 0% -75%;
+  background-position: 0% -65%;
 }
 
 #menu[data-active-index="3"]>#menu-background-pattern {
+  background-position: 0% -80%;
+}
+
+#menu[data-active-index="4"]>#menu-background-pattern {
+  background-position: 0% -95%;
+}
+
+#menu[data-active-index="5"]>#menu-background-pattern {
   background-position: 0% -100%;
 }
 
 #menu[data-active-index="0"]>#menu-background-image {
-  background-position: center 45%;
-}
-
-#menu[data-active-index="1"]>#menu-background-image {
   background-position: center 50%;
 }
 
-#menu[data-active-index="2"]>#menu-background-image {
-  background-position: center 55%;
-}
-
-#menu[data-active-index="3"]>#menu-background-image {
+#menu[data-active-index="1"]>#menu-background-image {
   background-position: center 60%;
 }
 
+#menu[data-active-index="2"]>#menu-background-image {
+  background-position: center 70%;
+}
+
+#menu[data-active-index="3"]>#menu-background-image {
+  background-position: center 80%;
+}
+
+#menu[data-active-index="4"]>#menu-background-image {
+  background-position: center 90%;
+}
+
+#menu[data-active-index="5"]>#menu-background-image {
+  background-position: center 100%;
+}
+
 #menu-background-pattern {
-  background-image: radial-gradient(rgba(196, 196, 196, 0.1) 9%,
-      transparent 9%);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 9%, 
+    transparent 9%
+  );
   background-position: 0% 0%;
   background-size: 12vmin 12vmin;
   height: 100vh;
@@ -201,8 +225,8 @@ header .logo img {
 }
 
 #menu-background-image {
-  background-position: center 40%;
-  background-size: 110vmax;
+  background-position: center 50%;
+  background-size: 150vmax;
   height: 100%;
   left: 0px;
   opacity: 0.15;
@@ -216,12 +240,12 @@ header .logo img {
 }
 
 #menu-items:hover~#menu-background-pattern {
-  background-size: 11vmin 11vmin;
-  opacity: 0.3;
+  background-size: 10vmin 10vmin;
+  opacity: 0.7;
 }
 
 #menu-items:hover~#menu-background-image {
-  background-size: 100vmax;
+  background-size: 140vmax;
   opacity: 0.5;
 }
 
@@ -245,7 +269,7 @@ header .logo img {
     transform 300ms ease-in-out;
 }
 
-.menu-item a{
+.menu-item a {
   color: white;
   text-decoration: none;
 }
@@ -263,6 +287,7 @@ header .logo img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .footer a {
