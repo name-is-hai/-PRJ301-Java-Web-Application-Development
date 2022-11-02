@@ -35,10 +35,4 @@ public class DBContext2 {
             Logger.getLogger(DBContext2.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-    public Connection getConnection() {
-        return connection;
-    }
-    
-    
 }

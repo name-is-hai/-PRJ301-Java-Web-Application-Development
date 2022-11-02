@@ -171,7 +171,6 @@ public class User {
         } catch (Exception e) {
             System.out.println("Update error" + e.getMessage());
         }
-
     }
 
     public boolean checkRegester(String acc) {

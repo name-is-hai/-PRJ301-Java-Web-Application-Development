@@ -1,4 +1,4 @@
-package context;
+package Context;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,9 +15,9 @@ import java.util.logging.Logger;
  *
  * @author FPT University - PRJ301
  */
-public class DBContext2 {
+public class DBContext {
     protected Connection connection;
-    public DBContext2()
+    public DBContext()
     {
         //@Students: You are allowed to edit user, pass, url variables to fit 
         //your system configuration
@@ -28,17 +28,11 @@ public class DBContext2 {
         try {
             String user = "sa";
             String pass = "123";
-            String url = "jdbc:sqlserver://NAMEISHAI:1433;databaseName=MyOrder";
+            String url = "jdbc:sqlserver://NAMEISHAI:1433;databaseName=Dormitory";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(url, user, pass);
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(DBContext2.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DBContext.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-    public Connection getConnection() {
-        return connection;
-    }
-    
-    
 }

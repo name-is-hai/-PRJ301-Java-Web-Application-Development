@@ -16,12 +16,15 @@ import java.util.ArrayList;
  *
  * @author haiqd
  */
-public class Product {
+public class Product extends DBContext2 {
 
     String code, name, price, unitsInStock, image;
+//    Connection cnn;//ket noi DB
+    Statement stm;//thu hien cau lenh sql
+    ResultSet rs; //luu tru va su ly du lieu
+    PreparedStatement pstm;//co the thu hien giong stm
 
     public Product() {
-        connect();
     }
 
     public Product(String code, String name, String price, String unitsInStock, String image) {
@@ -30,7 +33,6 @@ public class Product {
         this.price = price;
         this.unitsInStock = unitsInStock;
         this.image = image;
-        connect();
     }
 
     public String getCode() {
@@ -73,26 +75,11 @@ public class Product {
         this.image = image;
     }
 
-    Connection cnn;//ket noi DB
-    Statement stm;//thu hien cau lenh sql
-    ResultSet rs; //luu tru va su ly du lieu
-    PreparedStatement pstm;//co the thu hien giong stm
-
-    private void connect() {
-        try {
-            //Su dung DBcontext1
-            cnn = (new DBContext2()).getConnection();
-            System.out.println("Connected");
-        } catch (Exception e) {
-            System.out.println("Connect error" + e.getMessage());
-        }
-    }
-
     public ArrayList<Product> getListProducṭ() {
         ArrayList<Product> listProduct = new ArrayList<>();
         try {
             String strSelect = "select * from Products";
-            pstm = cnn.prepareStatement(strSelect);
+            pstm = connection.prepareStatement(strSelect);
             rs = pstm.executeQuery();
             while (rs.next()) {
                 String id = rs.getString(1);
@@ -112,7 +99,7 @@ public class Product {
     public Product getProductById(String code) {
         try {
             String strSelect = "select * from Products where ProductID = ?";
-            pstm = cnn.prepareStatement(strSelect);
+            pstm = connection.prepareStatement(strSelect);
             pstm.setString(1, code);
             rs = pstm.executeQuery();
             while (rs.next()) {
@@ -132,7 +119,7 @@ public class Product {
     public void updateByCode(String code, String name, String price) {
         try {
             String strUpdate = "UPDATE Products SET ProductName = ?, UnitPrice = ? WHERE ProductID = ?";
-            pstm = cnn.prepareStatement(strUpdate);
+            pstm = connection.prepareStatement(strUpdate);
             pstm.setString(1, name);
             pstm.setString(2, price);
             pstm.setString(3, code);
@@ -145,7 +132,7 @@ public class Product {
     public void deleteByCode(String code) {
         try {
             String strDelete = "DELETE FROM Products WHERE ProductID = ?";
-            pstm = cnn.prepareStatement(strDelete);
+            pstm = connection.prepareStatement(strDelete);
             pstm.setString(1, code);
             pstm.execute();
         } catch (Exception e) {
@@ -156,7 +143,7 @@ public class Product {
     public void addNewProduct(String id, String name, String price, String stock, String img, String category, String discontinued) {
         try {
             String strAdd = "SET IDENTITY_INSERT [dbo].[Products] ON  INSERT [dbo].[Products] ([ProductID], [ProductName], [UnitPrice], [UnitsInStock],[Image], [CategoryID], [Discontinued]) VALUES (?, ?, ?, ?, ?, ?, ?)";
-            pstm = cnn.prepareStatement(strAdd);
+            pstm = connection.prepareStatement(strAdd);
             pstm.setString(1, id);
             pstm.setString(2, name);
             pstm.setString(3, price);
