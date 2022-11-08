@@ -3,7 +3,41 @@ const intro = document.querySelector('.intro');
 const logo = document.querySelector('.logo-header');
 const logoSpan = document.querySelectorAll('.logo');
 
-window.addEventListener('DOMContentLoaded', ()=>{
+// window.addEventListener('DOMContentLoaded', ()=>{
+//     setTimeout(()=>{
+//         logoSpan.forEach((span, idx)=>{
+//             setTimeout(()=>{
+//                 span.classList.add('active');
+//             }, (idx +1) * 600)
+//         });
+
+//         setTimeout(()=>{
+//             logoSpan.forEach((span, idx)=>{
+//                 setTimeout(()=>{
+//                     span.classList.remove('active');
+//                     span.classList.add('fade');
+//                 }, (idx +1) * 50)
+//             })
+//         }, 2200); 
+
+//         setTimeout(()=>{
+//             intro.style.top = '-100vh';
+//         }, 2300)
+
+//     })
+// })
+
+var state = history.state || {};
+var reloadCount = state.reloadCount || 0;
+if (performance.navigation.type === 1) { // Reload
+    state.reloadCount = ++reloadCount;
+    history.replaceState(state, null, document.URL);
+} else if (reloadCount) {
+    delete state.reloadCount;
+    reloadCount = 0;
+    history.replaceState(state, null, document.URL);
+}
+if (reloadCount < 1) {
     setTimeout(()=>{
         logoSpan.forEach((span, idx)=>{
             setTimeout(()=>{
@@ -25,7 +59,10 @@ window.addEventListener('DOMContentLoaded', ()=>{
         }, 2300)
 
     })
-})
+}else{
+    intro.style.transition = 'none';
+    intro.style.top = '-100vh';
+}
 
 //img background
 document.onmousemove = function(a){

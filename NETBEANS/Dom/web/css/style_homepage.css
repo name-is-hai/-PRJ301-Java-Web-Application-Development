@@ -242,6 +242,7 @@ nav {
 }
 
 .login .container.right-panel-active .container--signin {
+    opacity: 0;
     transform: translateX(100%);
 }
 

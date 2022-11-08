@@ -19,7 +19,8 @@ public class BookServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
+        req.setAttribute("mess", "YOU Good!!");
+        req.getRequestDispatcher("index_booking.jsp").forward(req, resp);
     }
 
     @Override

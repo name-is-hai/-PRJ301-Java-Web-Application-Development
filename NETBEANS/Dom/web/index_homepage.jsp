@@ -29,12 +29,13 @@
     </head>
 
     <body style="background-image: url(img/form-background.webp);">
-        <!--    <div class="intro">
+            <div class="intro">
                 <h1 class="logo-header">
                     <span class="logo"><img src="img/logo_intro1.png" alt=""></span><span class="logo"><img
                             src="img/logo_intro2.png" alt=""></span>
                 </h1>
-            </div>-->
+            </div>
+        <c:if test="${mess != null}"><%@include  file="PopUp.jsp"%></c:if>
         <header>
             <img src="img/logo.png" alt="">
             <div class="navbar">
@@ -61,21 +62,19 @@
                         <div class="container__form container--signin">
                             <form action="login" method="post" class="form" id="form2">
                                 <h2 class="form__title">Sign In</h2>
-                                <input type="text" placeholder="Username" class="input" name="acc"/>
-                                <input type="password" placeholder="Password" class="input" name="pass"/>
+                                <input type="text" placeholder="Username" class="input" name="acc" required=""/>
+                                <input type="password" placeholder="Password" class="input" name="pass" required=""/>
                                 <a href="#" class="link">Forgot your password?</a>
-                                <input class="btn" type="submit" value="Sign In">
-                                <br><br>
-                                <p style="z-index: 3">${error}</p>
+                                <button class="btn" type="submit">Sign In</button>
                             </form>
                         </div>
                         <!-- Sign Up -->
                         <div class="container__form container--signup">
                             <form action="#" class="form" id="form1">
                                 <h2 class="form__title">Sign Up</h2>
-                                <input type="text" placeholder="User" class="input" name="acc"/>
-                                <input type="email" placeholder="Email" class="input" name="email"/>
-                                <input type="password" placeholder="Password" class="input" name="pass"/>
+                                <input type="text" placeholder="User" class="input" name="acc" required=""/>
+                                <input type="email" placeholder="Email" class="input" name="email" required=""/>
+                                <input type="password" placeholder="Password" class="input" name="pass" required=""/>
                                 <button class="btn" type="submit">Sign Up</button>
                             </form>
                         </div>

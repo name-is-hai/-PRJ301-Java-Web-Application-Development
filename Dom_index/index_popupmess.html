@@ -1,18 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style_popupmess.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    .mess {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: bisque;
+        height: 200px;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+    .close {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        bottom: 0;
+        background-color: blue;
+        border-radius: 50%;
+    }
+
+    .close span {
+        background-color: aliceblue;
+        width: 10px;
+        height: 2px;
+    }
+</style>
+
 <body>
     <div class="mess">
-        Your request will soon be responded to by email: 
+        Your request will soon be responded to by email:
     </div>
 </body>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            document.querySelector('.mess').style.top = '40%';
+            document.querySelector('.mess').style.opacity = 1;
+            document.body.style.backgroundColor = 'rgba(110, 110, 110, 0.507)';
+        }, 300)
+    });
+
+    window.onload = function () {
+        document.onclick = function (e) {
+            if (e.target.class !== '.mess') {
+                //element clicked wasn't the div; hide the div
+                setTimeout(() => {
+                    document.querySelector('.mess').style.top = '10%';
+                    document.querySelector('.mess').style.opacity = 0;
+                    document.body.style.backgroundColor = ''
+                    // divToHide.style.display = 'none';
+                }, 300)
+            }
+        };
+    };
+</script>
+
 </html>

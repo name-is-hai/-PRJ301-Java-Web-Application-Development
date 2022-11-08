@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mess{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    height: 200px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.mess.active{
+    display: none;
+}
+
+.close{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.close span{
+    background-color: aliceblue;
+    width: 10px;
+    height: 2px;
+}

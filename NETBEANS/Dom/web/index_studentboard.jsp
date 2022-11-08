@@ -38,12 +38,12 @@
                     <div class="logo">
                         <img src="img/logo.png" alt="">
                     </div>
-                    <div class="icon_close"><img src="img/Profile/${sessionScope.Student.getImg()}" alt=""></div>
+                    <div class="icon_close"><img src="img/arrow-down.svg" alt=""></div>
                     <div class="banner">
                         <h1 class="banner__title">Hello ${sessionScope.Student.getName()}</h1>
                     </div>
                     <ul>
-                        <li><a class="nav-link active-link" href="#">Home</a></li>
+                        <li><a class="nav-link active-link" href="menu">Home</a></li>
                         <li><a class="nav-link " href="#">Profile</a></li>
                         <li><a class="nav-link " href="#">Wallet</a></li>
                         <li><a class="nav-link " href="logout">Log Out</a></li>

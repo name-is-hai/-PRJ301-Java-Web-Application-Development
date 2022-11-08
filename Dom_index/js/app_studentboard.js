@@ -58,6 +58,7 @@ setTimeout(()=>{
 
 })
 
+
 // tabs.forEach((tab, index) => {
 //   tab.addEventListener("click", () => {
 //       tabs.forEach((tab) => tab.classList.remove("active-link"));

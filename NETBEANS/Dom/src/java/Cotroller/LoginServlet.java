@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet{
         AccountStudent as = d.checkAccountStudent(acc, pass);
         AccountAdmin aa = d.checkAccountAdmin(acc, pass);
         if(as == null && aa == null){
-            req.setAttribute("error", "Please check your account and password!!");
+            req.setAttribute("mess", "Please check your account and password!!");
             req.getRequestDispatcher("index_homepage.jsp").forward(req, resp);
         }
         if(as != null ){

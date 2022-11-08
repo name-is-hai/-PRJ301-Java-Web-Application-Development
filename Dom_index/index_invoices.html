@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FPT Dormity On Campus</title>
+    <link rel="shortcut icon" type="x-icon" href="img/icon.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_invoices.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="menu_icon">
+            <div class="icon">
+                <img src="img/aboutme.jpg" alt="">
+            </div>
+            <nav class="menu">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="icon_close"><img src="img/arrow-down.svg" alt=""></div>
+                <div class="banner">
+                    <h1 class="banner__title">Hello Vũ Đào Ngọc Hải</h1>
+                </div>
+                <ul>
+                    <li><a class="nav-link active-link" href="#">Home</a></li>
+                    <li><a class="nav-link " href="#">Wallet</a></li>
+                    <li><a class="nav-link " href="#">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="background-pattern"></div>
+    <div id="background-image" style="background-image: url(img/form-background.webp);">
+    </div>
+    <div class="text">
+        <div class="header">
+            <h1>Invoices</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Room</th>
+                    <th>Student ID</th>
+                    <th>Date</th>
+                    <th>Details</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>
+                        <p id="openOverlay" style="color: #007bff;cursor: pointer;">Detail</p>
+                        <div class="detail" id="popup">
+                            <p>StudentID: <span>Vũ Đào Ngọc Hải</span></p>
+                            <p>Room:<span>B203</span></p>
+                            <p>Bed: <span>5</span></p>
+                            <p>Date: <span>20-10-2022</span></p>
+                            <p>Room Usage Electricity: <span>165(num)</span></p>
+                            <p>Room Usage Water: <span>32(num)</span></p>
+                            <p>Your Usage Electricity: <span>65.17(num)</span></p>
+                            <p>Your Usage Water: <span>2.67(num)</span></p>
+                            <p>Payment methods: <span>FAP</span></p>
+                            <p>Date of payment: <span>12-11-2022</span></p>
+                            <hr>
+                            <div style="text-align: left;">
+                                <p>Total Money : <span style="text-align: right;">2600000đ</span></p>
+                                <hr style="position: relative; margin: 0 10px;">
+                                <p>Status: <span style="text-align: right;">Paid</span></p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>
+                        <p id="openOverlay" style="color: #007bff;cursor: pointer;">Detail</p>
+                        <div class="detail" id="popup">
+                            <p>StudentID: <span>Vũ Đào Ngọc Hải</span></p>
+                            <p>Room:<span>B203</span></p>
+                            <p>Bed: <span>5</span></p>
+                            <p>Date: <span>20-10-2022</span></p>
+                            <p>Room Usage Electricity: <span>165(num)</span></p>
+                            <p>Room Usage Water: <span>32(num)</span></p>
+                            <p>Your Usage Electricity: <span>65.17(num)</span></p>
+                            <p>Your Usage Water: <span>2.67(num)</span></p>
+                            <p>Payment methods: <span>FAP</span></p>
+                            <p>Date of payment: <span>12-11-2022</span></p>
+                            <hr>
+                            <div style="text-align: left;">
+                                <p>Total Money : <span style="text-align: right;">2600000đ</span></p>
+                                <hr style="position: relative; margin: 0 10px;">
+                                <p>Status: <span style="text-align: right;">Paid</span></p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>
+                        <p id="openOverlay" style="color: #007bff;cursor: pointer;">Detail</p>
+                        <div class="detail" id="popup">
+                            <p>StudentID: <span>Vũ Đào Ngọc Hải</span></p>
+                            <p>Room:<span>B203</span></p>
+                            <p>Bed: <span>5</span></p>
+                            <p>Date: <span>20-10-2022</span></p>
+                            <p>Room Usage Electricity: <span>165(num)</span></p>
+                            <p>Room Usage Water: <span>32(num)</span></p>
+                            <p>Your Usage Electricity: <span>65.17(num)</span></p>
+                            <p>Your Usage Water: <span>2.67(num)</span></p>
+                            <p>Payment methods: <span>FAP</span></p>
+                            <p>Date of payment: <span>12-11-2022</span></p>
+                            <hr>
+                            <div style="text-align: left;">
+                                <p>Total Money : <span style="text-align: right;">2600000đ</span></p>
+                                <hr style="position: relative; margin: 0 10px;">
+                                <p>Status: <span style="text-align: right;">Paid</span></p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div id="backgroundOverlay"></div>
+</body>
+<script src="js/app_invoices.js"></script>
+
+</html>

@@ -39,14 +39,33 @@ const text = document.querySelector('.text');
 const header = document.querySelector('.header');
 const container = document.querySelector('.container');
 
-window.addEventListener('DOMContentLoaded', ()=>{
-  setTimeout(()=>{
-    header.style.opacity = '1';
-  }, 300)
-
-  setTimeout(()=>{
-    text.style.top = '-25vh';
-    header.style.fontSize = '20px';
-    container.style.opacity = '1';
-}, 700)
-})
+var state = history.state || {};
+var reloadCount = state.reloadCount || 0;
+if (performance.navigation.type === 1) { // Reload
+    state.reloadCount = ++reloadCount;
+    history.replaceState(state, null, document.URL);
+} else if (reloadCount) {
+    delete state.reloadCount;
+    reloadCount = 0;
+    history.replaceState(state, null, document.URL);
+}
+if (reloadCount < 1) {
+  // window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      header.style.opacity = '1';
+    }, 300)
+  
+    setTimeout(() => {
+      text.style.top = '-25vh';
+      header.style.fontSize = '20px';
+      container.style.opacity = '1';
+    }, 700)
+  // })
+}else{
+  text.style.transition = 'none';
+  header.style.transition = 'none';
+  header.style.opacity = '1';
+  text.style.top = '-25vh';
+  header.style.fontSize = '20px';
+  container.style.opacity = '1';
+}

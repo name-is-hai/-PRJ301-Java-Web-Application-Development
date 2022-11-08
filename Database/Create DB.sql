@@ -1,5 +1,5 @@
-drop database Dormitory
---create database [Dormitory]
+--drop database Dormitory
+create database [Dormitory]
 
 use [Dormitory]
 
